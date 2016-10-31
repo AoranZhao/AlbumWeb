@@ -1,0 +1,15 @@
+Cha6 - Updating an image
+	configure.js: line 20
+		app.use(multer({
+			dest: path.join(__dirname, '../public/upload/temp')
+		}).single('file'));
+	image.js: line 45
+		var tempPath = req.file.path,
+			ext = path.extname(req.file.originalname).toLowerCase(),
+			targetPath = path.resolve('./public/upload' + imgUrl + ext);
+
+Cha7 - Inserting a document
+	test.js:
+		// collection's details:
+		console.log(docs.ops.length + ' record inserted.');
+		console.log(docs.ops[0].title + ' - ' + docs.ops[0]._id);
